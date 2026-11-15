@@ -55,7 +55,11 @@ async function main() {
   await render("home", makeLocals({ featured, posts: rest, path: "/" }), "index.html");
 
   // Archive
-  await render("archive", makeLocals({ posts: all, path: "/archive" }), "archive/index.html");
+  await render(
+    "archive",
+    makeLocals({ posts: all, archiveData: posts.getArchiveData(), path: "/archive" }),
+    "archive/index.html",
+  );
 
   // Tags
   const tags = posts.getTags();

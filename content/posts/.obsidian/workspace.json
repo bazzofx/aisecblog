@@ -1,0 +1,217 @@
+{
+  "main": {
+    "id": "1013156b9e75b5e7",
+    "type": "split",
+    "children": [
+      {
+        "id": "fc70d378cffb32db",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5bd90a5e90e1916f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "how-deploy-ai-at-work.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "how-deploy-ai-at-work"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "756a98de1a0ada3a",
+    "type": "split",
+    "children": [
+      {
+        "id": "20104c8ab3f9b11d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "52bbd7c2432634ea",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "eda15c6de4ba2a0a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "bfe8adb2b90ded85",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "41b0e456e5324fa9",
+    "type": "split",
+    "children": [
+      {
+        "id": "4dbcab79def53eb7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "65190ecab5ad7e7f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "how-deploy-ai-at-work.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "1c55092c86c9fe05",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "how-deploy-ai-at-work.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "fd9b85a868ae3a03",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "5bfeee4cdd1d0cbc",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "8891a3f48e742412",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "how-deploy-ai-at-work.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "5bd90a5e90e1916f",
+  "lastOpenFiles": [
+    "ai-assisted-code-review-workflow.md",
+    "how-deploy-ai-at-work.md",
+    "prompt-engineering-for-security-engineers - Copy.md",
+    "Assets/Attachments",
+    "Assets",
+    "Pasted image 20261115213226.png",
+    "reusable-security-prompts.md",
+    "from-alerts-to-triage-automating-the-soc.md",
+    "evaluating-security-agents.md",
+    "incident-response-playbooks-for-ai-systems.md",
+    "secret-scanning-in-cicd.md",
+    "code-review-checklist-ai-generated-code.md",
+    "fuzzing-cloud-apis-with-ai.md",
+    "building-a-security-knowledge-graph.md",
+    "static-analysis-that-doesnt-suck.md",
+    "prompt-injection-vs-jailbreak.md",
+    "threat-modeling-with-llms.md",
+    "automating-sbom-generation.md",
+    "security-engineers-guide-to-rag.md",
+    "hardening-mcp-server-deployments.md",
+    "llm-hallucinations-in-security-tooling.md",
+    "detecting-prompt-injection-in-production-llm-apps.md",
+    "automating-threat-hunting-notes-with-llms.md"
+  ]
+}

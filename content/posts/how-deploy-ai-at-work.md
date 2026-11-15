@@ -1,9 +1,12 @@
 ---
-title: "How to deploy AI securely at work"
-date: "2026-11-10"
-description: "Stop writing vague one-liners. Learn the structure of a prompt that produces line-level findings, working exploits, and actionable incident-response steps."
-tags: [AI, Prompting, Security Engineering]
-image: /images/deploy-secure.png
+title: How to deploy AI securely at work
+date: 2026-11-10
+description: Stop writing vague one-liners. Learn the structure of a prompt that produces line-level findings, working exploits, and actionable incident-response steps.
+tags:
+  - AI
+  - Prompting
+  - Security Engineering
+image: /images/cover0.png
 featured: true
 ---
 
@@ -34,17 +37,17 @@ Let's have a high level view of some basic house keepings you want to do when us
 
 One of the most important principles is to separate your AI development environment from your corporate infrastructure.
 
-**My preferred approach is to run AI development tools inside a dedicated virtual machine (VM).**
+**My preferred approach is to run AI development tools inside a dedicated virtual machine (VM), but inside a docker also works well**
 
 Ideally, this environment should have:
 - A separate, isolated network with no unrestricted access to corporate systems.
 - No direct access to production databases, file shares, or sensitive internal resources.
-- Restricted outbound internet connectivity where appropriate.
+- Restricted outbound internet connectivity.
 - Snapshots or a straightforward way to restore the environment.
 - Only the applications, dependencies, and permissions necessary for development.
 
 ## 2. Give AI Its Own Identity, Not Yours
-When integrating AI agents with APIs, repositories, cloud services, or other development tools, avoid allowing them to operate using your personal administrative credentials.
+When integrating AI agents with APIs, avoid allowing them to operate using your personal administrative credentials.
 
 - **Least privilege:** Only grant the permissions necessary for the task.
 - **Short-lived credentials:** Prefer temporary tokens that expire automatically.
@@ -68,8 +71,7 @@ Your dataset could contain employee names, email addresses, phone numbers, inter
 |Internal server hostname|SERVER-001|
 |Customer organisation|CUSTOMER-A|
 |Production API token|MOCK_TOKEN|
-
-For relational datasets, keep consistent mappings between records so that correlations continue working, or create a separate script that will help you to anonymised the data so its consistent.
+>For relational datasets, keep consistent mappings between records so that correlations continue working, or create a separate script that will help you to anonymised the data so its consistent.
 
 ## 4. Understand the Problem Before Asking AI to Solve It
 
@@ -99,6 +101,7 @@ If you're comfortable with Python, use it for data processing and backend servic
 If you know JavaScript and Node.js, consider those for web applications.
 
 The goal is not simply to generate working code.
+
 **The goal is to generate code that you can understand, troubleshoot, secure, and maintain.**
 
 ## 6. Prototype Quickly, Then Build Incrementally
@@ -121,7 +124,7 @@ Get those four features working reliably before introducing complex ownership gr
 **Start small. Make it work. Understand it. Then expand.**
 
 
-## 7. Documentation Is Part of Development, Not an Afterthought
+## 7. Documentation is Part of Development, Not an Afterthought
 
 One of the best habits you can develop when working with AI coding agents is documenting your project as you build it.
 
@@ -157,9 +160,7 @@ Each file serves a purpose.
 ## 8. Track Features, Bugs, and Improvements
 
 As your project grows, so will the number of ideas, issues, and feature requests.
-
 You don't need an expensive enterprise platform.
-
 GitHub Issues, GitLab Issues, or even a simple Markdown file can be enough.
 
 Consider tracking work using categories such as:

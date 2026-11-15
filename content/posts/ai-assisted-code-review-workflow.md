@@ -1,9 +1,12 @@
 ---
-title: "Building an AI-Assisted Code Review Workflow"
-date: "2026-10-28"
-description: "A repeatable pipeline that pairs an LLM with a deterministic scanner so you get the depth of AI without the noise and false positives."
-tags: [AI, Code Review, Tooling]
-image: /images/cover-2.svg
+title: Building an AI-Assisted Code Review Workflow
+date: 2026-10-28
+description: A repeatable pipeline that pairs an LLM with a deterministic scanner so you get the depth of AI without the noise and false positives.
+tags:
+  - AI
+  - Tooling
+  - Code-Review
+image: /images/cover2.png
 ---
 
 Automated code review falls apart in two ways: a static analyzer flags everything, or an LLM flags nothing you can trust. The fix is to stop choosing between them and run them in sequence.

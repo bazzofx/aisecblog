@@ -40,7 +40,7 @@ app.get("/", (req, res) => {
 
 // Archive — every post, newest first.
 app.get("/archive", (req, res) => {
-  res.render("archive", { posts: posts.getPosts() });
+  res.render("archive", { posts: posts.getPosts(), archiveData: posts.getArchiveData() });
 });
 
 // Tag index and per-tag listing.

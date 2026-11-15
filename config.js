@@ -14,9 +14,9 @@ module.exports = {
   url: "http://localhost:3000",
 
   author: {
-    name: "Your Name",
-    email: "you@example.com",
-    twitter: "", // optional handle (without @); leave "" to hide
+    name: "Paulo Bazzo",
+    email: "hello@cybersamurai.co.uk",
+    twitter: "bazzofx", // optional handle (without @); leave "" to hide
   },
 
   // Optional logo image, relative to /public (e.g. "/images/logo.svg").
