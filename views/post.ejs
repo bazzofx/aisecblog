@@ -7,7 +7,7 @@
       <div class="container">
         <div class="post-hero-media">
           <% if (post.image) { %>
-            <img src="<%= post.image %>" alt="" />
+            <img src="<%= asset(post.image) %>" alt="" />
           <% } else { %>
             <div class="post-hero-placeholder" aria-hidden="true"><%= post.title %></div>
           <% } %>
@@ -24,7 +24,7 @@
           <% if (post.tags.length) { %>
             <div class="post-tags">
               <% post.tags.forEach(function (t) { %>
-                <a class="tag-pill" href="/tags/<%= encodeURIComponent(t) %>"><%= t %></a>
+                <a class="tag-pill" href="<%= url('/tags/' + encodeURIComponent(t)) %>"><%= t %></a>
               <% }) %>
             </div>
           <% } %>

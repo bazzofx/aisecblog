@@ -6,11 +6,11 @@
   <title><%= (typeof pageTitle !== "undefined" && pageTitle) ? pageTitle + " | " + site.name : site.name %></title>
   <meta name="description" content="<%= (typeof pageDescription !== "undefined" && pageDescription) ? pageDescription : site.description %>" />
   <meta name="theme-color" content="#ff0ead" />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="<%= asset('/favicon.svg') %>" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="<%= asset('/css/styles.css') %>" />
   <meta property="og:site_name" content="<%= site.name %>" />
   <meta property="og:title" content="<%= (typeof pageTitle !== "undefined" && pageTitle) ? pageTitle : site.name %>" />
   <meta property="og:description" content="<%= (typeof pageDescription !== "undefined" && pageDescription) ? pageDescription : site.description %>" />

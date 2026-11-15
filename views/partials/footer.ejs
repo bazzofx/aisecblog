@@ -1,8 +1,8 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-brand">
-      <a class="brand" href="/">
-        <% if (site.logo) { %><img class="brand-logo" src="<%= site.logo %>" alt="" /><% } %>
+      <a class="brand" href="<%= url('/') %>">
+        <% if (site.logo) { %><img class="brand-logo" src="<%= asset(site.logo) %>" alt="" /><% } %>
         <span><%= site.name %></span>
       </a>
       <p><%= site.footer.text %></p>
@@ -18,8 +18,11 @@
 
     <nav class="footer-links" aria-label="Footer">
       <% site.nav.forEach(function (item) { %>
-        <a href="<%= item.href %>"><%= item.label %></a>
+        <a href="<%= url(item.href) %>"><%= item.label %></a>
       <% }) %>
+      <% if (site.githubUrl) { %>
+        <a href="<%= site.githubUrl %>" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <% } %>
     </nav>
   </div>
 
@@ -27,6 +30,6 @@
     &copy; <%= new Date().getFullYear() %> <%= site.name %>. Built with Node.js + Express.
   </div>
 </footer>
-<script src="/js/main.js"></script>
+<script src="<%= asset('/js/main.js') %>"></script>
 </body>
 </html>

@@ -92,8 +92,9 @@ Posts are re-read from `content/posts/` on every request, so **adding or editing
 
 ### 1. Identity, nav, author — `config.js`
 
-Everything user-facing (name, tagline, description, author, nav links, logo) is
-in [`config.js`](config.js). Change it and restart.
+Everything user-facing (name, tagline, description, author, nav links, logo,
+and the `githubUrl` shown in the navbar/footer) is in [`config.js`](config.js).
+Change it and restart.
 
 ### 2. Colors & typography — `public/css/styles.css`
 
@@ -127,24 +128,53 @@ thank-you note. Set `subscribe: false` to hide it entirely.
 
 ---
 
+## GitHub Pages
+
+The repo is wired to publish a static copy on GitHub Pages at
+**`https://bazzofx.github.io/aisecblog/`**.
+
+1. **Push to `main`** — the workflow in
+   [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) runs
+   `npm run build` and publishes the generated `dist/` folder.
+2. **Enable Pages** — on GitHub, open the repo → *Settings → Pages → Source* and
+   choose **GitHub Actions**. (Do this once.)
+3. The site is then live at `https://bazzofx.github.io/aisecblog/`.
+
+The workflow builds with `BASE_PATH=/aisecblog`, so every link and asset is
+prefixed with the project subpath. To preview the same output locally:
+
+```bash
+npm run build          # builds dist/ (BASE_PATH defaults to "")
+npx serve dist         # serve the static output
+```
+
+> If you rename the repository, update `BASE_PATH` in
+> [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) to the new name.
+
+---
+
 ## Project structure
 
 ```
 .
 ├── server.js                  # Express app + routes
-├── config.js                  # site identity & settings
+├── config.js                  # site identity, githubUrl & settings
 ├── lib/
 │   └── posts.js               # Markdown loader & helpers
 ├── content/
 │   └── posts/                 # ← write your posts here
 ├── views/
 │   ├── partials/              # head, navbar, footer, post-card
-│   ├── home.ejs  archive.ejs  tags.ejs  tag.ejs  post.ejs  404.ejs
+│   └── home.ejs  archive.ejs  tags.ejs  tag.ejs  post.ejs  404.ejs
 ├── public/
 │   ├── css/styles.css         # theme
 │   ├── js/main.js             # nav + subscribe
 │   ├── images/                # covers + icons
 │   └── favicon.svg
+├── scripts/
+│   └── build.js               # static export → dist/ (GitHub Pages)
+├── .github/
+│   └── workflows/deploy.yml   # Pages build & deploy
 └── package.json
 ```
 
@@ -154,4 +184,3 @@ The layout and styling are a faithful recreation of the *SecEngAI.com* beehiiv
 publication, which was mirrored locally for reference. Only the visual language
 was reproduced; all content here is original placeholder material for you to
 replace.
-#

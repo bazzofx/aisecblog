@@ -23,6 +23,14 @@ module.exports = {
   // Leave "" to render the site name as a text logo.
   logo: "",
 
+  // Link to the source repository (shown in the footer and navbar).
+  githubUrl: "https://github.com/bazzofx/aisecblog",
+
+  // Base path when hosted under a subpath, e.g. a GitHub Pages project site
+  // (https://<user>.github.io/aisecblog/). Leave "" for local dev / root
+  // hosting. The deploy workflow overrides this via the BASE_PATH env var.
+  basePath: "",
+
   // --- Navigation -------------------------------------------------------
   nav: [
     { label: "Home", href: "/" },

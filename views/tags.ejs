@@ -10,7 +10,7 @@
     <% if (tags.length) { %>
       <div class="tag-cloud">
         <% tags.forEach(function (t) { %>
-          <a class="tag-pill" href="/tags/<%= encodeURIComponent(t.tag) %>"><%= t.tag %> <span>(<%= t.count %>)</span></a>
+          <a class="tag-pill" href="<%= url('/tags/' + encodeURIComponent(t.tag)) %>"><%= t.tag %> <span>(<%= t.count %>)</span></a>
         <% }) %>
       </div>
     <% } else { %>

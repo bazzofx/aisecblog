@@ -14,9 +14,19 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Shared data + helpers available to every template.
 app.use((req, res, next) => {
+  const base = config.basePath || "";
   res.locals.site = config;
+  res.locals.base = base;
+  // Internal path: prefix the base path and ensure a trailing slash so the
+  // same templates work at "/" locally and "/aisecblog/" on GitHub Pages.
+  res.locals.url = (p) => {
+    const full = base + p;
+    return full.endsWith("/") ? full : full + "/";
+  };
+  // Static asset: prefix the base path, but leave absolute URLs untouched.
+  res.locals.asset = (p) => (/^https?:\/\//i.test(p || "") ? p : base + (p || ""));
   res.locals.formatDate = posts.formatDate;
-  res.locals.path = req.path;
+  res.locals.path = (req.path || "/").replace(/\/+$/, "") || "/";
   next();
 });
 
