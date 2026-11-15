@@ -15,5 +15,9 @@
   <meta property="og:title" content="<%= (typeof pageTitle !== "undefined" && pageTitle) ? pageTitle : site.name %>" />
   <meta property="og:description" content="<%= (typeof pageDescription !== "undefined" && pageDescription) ? pageDescription : site.description %>" />
   <meta property="og:type" content="website" />
+  <% if (site.firebase && site.firebase.enabled) { %>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+  <% } %>
 </head>
 <body>

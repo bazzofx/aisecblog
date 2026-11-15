@@ -119,12 +119,38 @@ Drop images into `public/images/` and reference them as `/images/name.ext`.
 The three shipped `cover-*.svg` files are simple gradient placeholders you can
 replace with real screenshots or photos.
 
-### 4. The subscribe form
+### 4. Email collection (Firebase)
 
-The footer form is a **placeholder**. To collect real subscribers, set
-`subscribeEndpoint` in `config.js` to your provider's form action URL (Mailchimp,
-Buttondown, beehiiv, ConvertKit, etc.). Until you do, submitting just shows a
-thank-you note. Set `subscribe: false` to hide it entirely.
+The footer subscribe form saves emails to a Firestore `subscribers` collection
+using the Firebase Web SDK — no backend required, so it works on GitHub Pages.
+
+1. In the Firebase console, create a **Firestore database** (Production mode).
+2. Copy your web app config: *Project settings → Your apps → Web app → Config*.
+3. In [`config.js`](config.js) set `firebase.enabled: true` and paste `apiKey`
+   and `appId` (the other fields are already filled from your project).
+4. In *Firestore → Rules*, use:
+
+```text
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /subscribers/{docId} {
+      allow read: if false;
+      allow create: if request.resource.data.email is string
+                     && request.resource.data.email.size() > 3
+                     && request.resource.data.email.size() < 320
+                     && request.resource.data.email.matches(".*@.*");
+    }
+  }
+}
+```
+
+> The `apiKey` is a public identifier, not a secret — the rules above do the
+> real authorization, so it's safe to commit.
+
+Alternatively, set `subscribeEndpoint` in `config.js` to an external form action
+(Mailchimp, Buttondown, beehiiv, ConvertKit, etc.) and the form posts there
+natively. Set `subscribe: false` to hide the form entirely.
 
 ---
 

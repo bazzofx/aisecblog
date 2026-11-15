@@ -42,8 +42,25 @@ module.exports = {
   // Show a subscribe call-to-action (placeholder form — wire it up below).
   subscribe: true,
   // Where the subscribe form should POST to ("" disables the form action;
-  // the demo handler just shows a thank-you message).
+  // leave "" to use the Firebase integration below instead).
   subscribeEndpoint: "",
+
+  // --- Firebase (email collection) ---------------------------------------
+  // To save subscribe-form emails to Firestore, set `enabled: true` and fill
+  // in `apiKey` and `appId` from:
+  //   Firebase console → ⚙️ Project settings → Your apps → Web app → Config
+  // The apiKey is a public identifier, not a secret (Firestore security rules
+  // do the real authorization), so it is safe to commit to the repo.
+  firebase: {
+    enabled: true,
+    apiKey: "AIzaSyBrl4_C8jcHiPwLfl1sXG2R-KYp8lM-GbU",
+    authDomain: "aiblog-4f459.firebaseapp.com",
+    projectId: "aiblog-4f459",
+    storageBucket: "aiblog-4f459.firebasestorage.app",
+    messagingSenderId: "453445326248",
+    appId: "1:453445326248:web:e5fbf8e94eb287e7b9b99d",
+    measurementId: "G-KP5XBTL4CG",
+  },
 
   postsPerPage: 9,
 
