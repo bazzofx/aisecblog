@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Prompt engineering for security engineers">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff0ead"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g1)"/>
+  <circle cx="1030" cy="110" r="190" fill="#ffffff" opacity="0.08"/>
+  <circle cx="140" cy="560" r="230" fill="#000000" opacity="0.14"/>
+  <circle cx="760" cy="470" r="70" fill="#ffffff" opacity="0.10"/>
+  <text x="84" y="340" font-family="Inter, Arial, sans-serif" font-size="66" font-weight="800" fill="#ffffff">Prompt Engineering</text>
+  <text x="84" y="416" font-family="Inter, Arial, sans-serif" font-size="32" fill="#ffffff" opacity="0.9">for Security Engineers</text>
+</svg>

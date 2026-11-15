@@ -1,0 +1,52 @@
+<%- include('partials/head', { pageTitle: post.title, pageDescription: post.description }) %>
+<%- include('partials/navbar') %>
+
+<main id="main">
+  <article>
+    <header class="post-hero">
+      <div class="container">
+        <div class="post-hero-media">
+          <% if (post.image) { %>
+            <img src="<%= post.image %>" alt="" />
+          <% } else { %>
+            <div class="post-hero-placeholder" aria-hidden="true"><%= post.title %></div>
+          <% } %>
+        </div>
+        <div class="post-hero-inner">
+          <h1 class="post-title"><%= post.title %></h1>
+          <div class="post-meta">
+            <span><%= post.author || site.author.name %></span>
+            <span class="dot">&middot;</span>
+            <span><time datetime="<%= post.dateRaw %>"><%= formatDate(post.date) %></time></span>
+            <span class="dot">&middot;</span>
+            <span><%= post.minutes %> min read</span>
+          </div>
+          <% if (post.tags.length) { %>
+            <div class="post-tags">
+              <% post.tags.forEach(function (t) { %>
+                <a class="tag-pill" href="/tags/<%= encodeURIComponent(t) %>"><%= t %></a>
+              <% }) %>
+            </div>
+          <% } %>
+        </div>
+      </div>
+    </header>
+
+    <div class="rich-text">
+      <%- post.html %>
+    </div>
+  </article>
+
+  <% if (related.length) { %>
+    <section class="related">
+      <h2 class="related-title">Related posts</h2>
+      <div class="post-grid">
+        <% related.forEach(function (p) { %>
+          <%- include('partials/post-card', { post: p, featured: false }) %>
+        <% }) %>
+      </div>
+    </section>
+  <% } %>
+</main>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,40 @@
+<%- include('partials/head', { pageTitle: "", pageDescription: site.description }) %>
+<%- include('partials/navbar') %>
+
+<main id="main">
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title"><%= site.name %></h1>
+      <p class="hero-tagline"><%= site.tagline %></p>
+      <div class="hero-cta">
+        <% if (site.subscribe) { %><a class="btn btn-primary" href="#subscribe">Get the newsletter</a><% } %>
+        <a class="btn btn-ghost" href="/archive">Browse the archive</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="latest" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Latest posts</h2>
+        <a class="section-link" href="/archive">View all &rarr;</a>
+      </div>
+
+      <% if (featured) { %>
+        <%- include('partials/post-card', { post: featured, featured: true }) %>
+      <% } %>
+
+      <% if (posts.length) { %>
+        <div class="post-grid">
+          <% posts.forEach(function (p) { %>
+            <%- include('partials/post-card', { post: p, featured: false }) %>
+          <% }) %>
+        </div>
+      <% } else if (!featured) { %>
+        <p class="empty">No posts yet. Add a Markdown file to <code>content/posts/</code>.</p>
+      <% } %>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>

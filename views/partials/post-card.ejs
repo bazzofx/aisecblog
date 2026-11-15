@@ -1,0 +1,28 @@
+<article class="post-card <%= featured ? "post-featured" : "" %>">
+  <% if (post.image) { %>
+    <img class="post-card-media" src="<%= post.image %>" alt="" loading="lazy" />
+  <% } else { %>
+    <div class="post-card-placeholder" aria-hidden="true"><%= post.title %></div>
+  <% } %>
+
+  <% if (featured) { %><div class="post-card-body"><% } %>
+
+  <% if (post.tags.length) { %>
+    <div class="post-card-tags">
+      <% post.tags.forEach(function (t) { %>
+        <a class="tag-pill" href="/tags/<%= encodeURIComponent(t) %>"><%= t %></a>
+      <% }) %>
+    </div>
+  <% } %>
+
+  <h3 class="post-card-title"><a class="card-link" href="/p/<%= post.slug %>"><%= post.title %></a></h3>
+  <p class="post-card-desc"><%= post.description %></p>
+
+  <footer class="post-card-meta">
+    <span><%= formatDate(post.date) %></span>
+    <span class="dot">&middot;</span>
+    <span><%= post.minutes %> min read</span>
+  </footer>
+
+  <% if (featured) { %></div><% } %>
+</article>

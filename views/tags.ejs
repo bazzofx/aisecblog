@@ -1,0 +1,22 @@
+<%- include('partials/head', { pageTitle: "Tags" }) %>
+<%- include('partials/navbar') %>
+
+<main id="main" class="section">
+  <div class="container container-narrow">
+    <div class="section-head">
+      <h1 class="section-title">Tags</h1>
+    </div>
+
+    <% if (tags.length) { %>
+      <div class="tag-cloud">
+        <% tags.forEach(function (t) { %>
+          <a class="tag-pill" href="/tags/<%= encodeURIComponent(t.tag) %>"><%= t.tag %> <span>(<%= t.count %>)</span></a>
+        <% }) %>
+      </div>
+    <% } else { %>
+      <p class="empty">No tags yet.</p>
+    <% } %>
+  </div>
+</main>
+
+<%- include('partials/footer') %>

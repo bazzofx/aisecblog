@@ -1,0 +1,23 @@
+<%- include('partials/head', { pageTitle: "Tag: " + tag }) %>
+<%- include('partials/navbar') %>
+
+<main id="main" class="section">
+  <div class="container">
+    <div class="section-head">
+      <h1 class="section-title">#<%= tag %></h1>
+      <span class="section-link"><%= posts.length %> post<%= posts.length === 1 ? "" : "s" %></span>
+    </div>
+
+    <% if (posts.length) { %>
+      <div class="post-grid">
+        <% posts.forEach(function (p) { %>
+          <%- include('partials/post-card', { post: p, featured: false }) %>
+        <% }) %>
+      </div>
+    <% } else { %>
+      <p class="empty">No posts with this tag.</p>
+    <% } %>
+  </div>
+</main>
+
+<%- include('partials/footer') %>

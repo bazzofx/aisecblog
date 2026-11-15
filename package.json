@@ -1,0 +1,27 @@
+{
+  "name": "aisecblog",
+  "version": "1.0.0",
+  "description": "A modern Node.js blog with a beehiiv-inspired design. Write posts as Markdown files; the server renders home, post, archive and tag pages with the extracted theme.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=18.11"
+  },
+  "keywords": [
+    "blog",
+    "nodejs",
+    "express",
+    "ejs",
+    "markdown"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "gray-matter": "^4.0.3",
+    "marked": "^4.3.0"
+  }
+}

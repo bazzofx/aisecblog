@@ -1,0 +1,5 @@
+
+!function(){try{var e="undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[n]="e8e35416-606b-5e22-a9ac-43ddb202b942")}catch(e){}}();
+import{o as e}from"./rolldown-runtime-BCiCTKAo.js";import{Ui as t}from"./root-vendor-Cuz7G2PJ.js";var n=e(t(),1);function r({icon:e}={}){(0,n.useEffect)(()=>{if(typeof window>`u`||!e)return;let t=async()=>{if(`serviceWorker`in navigator)try{let t=await navigator.serviceWorker.getRegistration();t?.active&&t.active.postMessage({type:`update_icon`,payload:{icon:e}})}catch(e){console.error(`Error getting service worker registration:`,e)}},n=()=>{t()};return`serviceWorker`in navigator&&navigator.serviceWorker.addEventListener(`controllerchange`,n),t(),()=>{`serviceWorker`in navigator&&navigator.serviceWorker.removeEventListener(`controllerchange`,n)}},[e])}export{r as t};
+//# sourceMappingURL=usePushNotification-Ck10ktPs.js.map
+//# debugId=e8e35416-606b-5e22-a9ac-43ddb202b942

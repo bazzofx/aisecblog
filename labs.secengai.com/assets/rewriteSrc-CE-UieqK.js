@@ -1,0 +1,5 @@
+
+!function(){try{var e="undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[n]="871db405-8c24-55f3-b2cb-80b45f6dfd61")}catch(e){}}();
+var e={"beehiiv-images-production.s3.amazonaws.com":`media.beehiiv.com`,"media.beehiiv.net":`media.beehiiv.com`,"beehiiv-images-staging.s3.amazonaws.com":`media.staginghiiv.com`,"staging-media.beehiiv.net":`media.staginghiiv.com`,"community.beehiiv.com":`community.beehiiv.com`,"community.staginghiiv.com":`community.staginghiiv.com`},t=(t,n={fit:`scale-down`,quality:`80`,format:`auto`,onerror:`redirect`})=>{let r=null;try{r=new URL(t)}catch{return t}return Object.keys(e).includes(r.host)?`https://${e[r?.host]}/cdn-cgi/image/${new URLSearchParams(n).toString().replace(/&/g,`,`)}${r?.pathname}${r?.search}`:t};export{t};
+//# sourceMappingURL=rewriteSrc-CE-UieqK.js.map
+//# debugId=871db405-8c24-55f3-b2cb-80b45f6dfd61

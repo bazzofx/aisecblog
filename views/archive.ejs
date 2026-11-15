@@ -1,0 +1,31 @@
+<%- include('partials/head', { pageTitle: "Archive" }) %>
+<%- include('partials/navbar') %>
+
+<main id="main" class="section">
+  <div class="container container-narrow">
+    <div class="section-head">
+      <h1 class="section-title">Archive</h1>
+      <span class="section-link"><%= posts.length %> post<%= posts.length === 1 ? "" : "s" %></span>
+    </div>
+
+    <% if (posts.length) { %>
+      <ol class="archive-list">
+        <% posts.forEach(function (p) { %>
+          <li class="archive-item">
+            <span class="archive-date"><%= formatDate(p.date) %></span>
+            <a href="/p/<%= p.slug %>"><%= p.title %></a>
+            <span class="archive-tags">
+              <% p.tags.forEach(function (t) { %>
+                <a class="tag-pill" href="/tags/<%= encodeURIComponent(t) %>"><%= t %></a>
+              <% }) %>
+            </span>
+          </li>
+        <% }) %>
+      </ol>
+    <% } else { %>
+      <p class="empty">Nothing here yet.</p>
+    <% } %>
+  </div>
+</main>
+
+<%- include('partials/footer') %>
