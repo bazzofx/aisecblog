@@ -20,9 +20,6 @@
       <% site.nav.forEach(function (item) { %>
         <a href="<%= url(item.href) %>"><%= item.label %></a>
       <% }) %>
-      <% if (site.githubUrl) { %>
-        <a href="<%= site.githubUrl %>" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <% } %>
     </nav>
   </div>
 

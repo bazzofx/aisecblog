@@ -4,7 +4,7 @@
  */
 module.exports = {
   // --- Identity ---------------------------------------------------------
-  name: "AI Security Blog",
+  name: "AI Cyber Samurai",
   tagline:
     "Practical insights, real-world use cases, and tools at the intersection of AI and security.",
   description:
@@ -22,9 +22,6 @@ module.exports = {
   // Optional logo image, relative to /public (e.g. "/images/logo.svg").
   // Leave "" to render the site name as a text logo.
   logo: "",
-
-  // Link to the source repository (shown in the footer and navbar).
-  githubUrl: "https://github.com/bazzofx/aisecblog",
 
   // Base path when hosted under a subpath, e.g. a GitHub Pages project site
   // (https://<user>.github.io/aisecblog/). Leave "" for local dev / root

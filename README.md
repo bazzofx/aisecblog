@@ -92,9 +92,8 @@ Posts are re-read from `content/posts/` on every request, so **adding or editing
 
 ### 1. Identity, nav, author — `config.js`
 
-Everything user-facing (name, tagline, description, author, nav links, logo,
-and the `githubUrl` shown in the navbar/footer) is in [`config.js`](config.js).
-Change it and restart.
+Everything user-facing (name, tagline, description, author, nav links, logo) is
+in [`config.js`](config.js). Change it and restart.
 
 ### 2. Colors & typography — `public/css/styles.css`
 
@@ -184,7 +183,7 @@ npx serve dist         # serve the static output
 ```
 .
 ├── server.js                  # Express app + routes
-├── config.js                  # site identity, githubUrl & settings
+├── config.js                  # site identity & settings
 ├── lib/
 │   └── posts.js               # Markdown loader & helpers
 ├── content/
