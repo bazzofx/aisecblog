@@ -3,7 +3,7 @@ title: "How to deploy AI securely at work"
 date: "2026-11-10"
 description: "Stop writing vague one-liners. Learn the structure of a prompt that produces line-level findings, working exploits, and actionable incident-response steps."
 tags: [AI, Prompting, Security Engineering]
-image: /images/cover-1.svg
+image: /images/deploy-secure.png
 featured: true
 ---
 
