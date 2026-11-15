@@ -137,9 +137,9 @@ service cloud.firestore {
     match /subscribers/{docId} {
       allow read: if false;
       allow create: if request.resource.data.email is string
-                     && request.resource.data.email.size() > 3
-                     && request.resource.data.email.size() < 320
-                     && request.resource.data.email.matches(".*@.*");
+                     && request.resource.data.email.size() >= 5
+                     && request.resource.data.email.size() <= 254
+                     && request.resource.data.email.matches(".+@.+[.].+");
     }
   }
 }
